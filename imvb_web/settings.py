@@ -31,14 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
+    "django.contrib.admin", # admin site
+    "django.contrib.auth", # authentication system
+    "django.contrib.contenttypes", # framework for content types
+    "django.contrib.sessions", # session framework
+    "django.contrib.messages", # messaging framework
+    "django.contrib.staticfiles", # framework for managing static files
     # our apps
-    'home',
+    'home', # homepage
+    'schedule',
     # 3rd party
     'crispy_forms'
 
