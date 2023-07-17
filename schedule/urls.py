@@ -1,6 +1,5 @@
 from django.urls import path
 from . import views
-# from schedule.views import schedule_view
 
 app_name = 'schedule'
 

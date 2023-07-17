@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # our apps
     'home', # homepage
     'schedule',
+    'roster',
     # 3rd party
     'crispy_forms'
 

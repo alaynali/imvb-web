@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
-{% if tournamnet_list %}
+{% block title %}
+Schedule
+{% endblock title %}
+
+{% if tournament_list %}
     <ul>
     {% for tournament in tournament_list %}
         <li><a href="/schedule/{{ tournament.id }}/">{{ tournament.name }}</a></li>
