@@ -9,8 +9,8 @@ def schedule_view(request):
     message = 'hello world from schedule view!'
     tournament_list = Tournament.objects.order_by("id")
     context = {"tournament_list": tournament_list}
-    # return render(request, 'schedule/index.html', context)
-    return render(request, 'schedule/main.html', {'h': message})
+    return render(request, 'schedule/index.html', context)
+    # return render(request, 'schedule/main.html', {'h': message})
 
 def results(request):
     message = 'hello world from schedule results!'

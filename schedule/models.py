@@ -7,7 +7,7 @@ class Tournament(models.Model):
     name = models.CharField(max_length=200)
     # team = models.CharField(max_length=100)
     start_date = models.DateField()
-    end_date = models.DateField(blank=True, null=True) #doesn't work to leave it blank right now
+    end_date = models.DateField(blank=True, null=True)
     description = models.TextField(blank=True)
     # tournament_id = models.CharField(editable=False, default=str(start_date), max_length=10)
     # created = models.DateTimeField(auto_now_add=True)
@@ -15,7 +15,10 @@ class Tournament(models.Model):
 
     def __str__(self):
         # self.id = f"{self.start_date.strftime('%m%d%y')}"
-        return f"{self.name} | {self.start_date.strftime('%m/%d/%y')}-{self.end_date.strftime('%m/%d/%y')}"
+        if self.end_date:
+            return f"{self.name} | {self.start_date.strftime('%m/%d/%y')}-{self.end_date.strftime('%m/%d/%y')}"
+        else:
+            return f"{self.name} | {self.start_date.strftime('%m/%d/%y')}" 
     
     # def save(self, *args, **kwargs):
 
@@ -24,3 +27,16 @@ class Tournament(models.Model):
     #         self.created = timezone.now()
     #     self.updated = timezone.now()
     #     return super(Tournament, self).save(*args, **kwargs)
+
+class Event(models.Model):
+    name = models.CharField(max_length=200)
+    start_date = models.DateField()
+    end_date = models.DateField(blank=True, null=True)
+    description = models.TextField(blank=True)
+
+    def __str__(self):
+        if self.end_date:
+            return f"{self.name} | {self.start_date.strftime('%m/%d/%y')}-{self.end_date.strftime('%m/%d/%y')}"
+        else:
+            return f"{self.name} | {self.start_date.strftime('%m/%d/%y')}" 
+    
