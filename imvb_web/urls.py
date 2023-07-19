@@ -23,6 +23,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include('home.urls', namespace='home')),
     path('schedule/', include('schedule.urls', namespace='schedule')),
+    path('teams/', include('roster.urls', namespace='teams'))
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
