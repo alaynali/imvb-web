@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import Http404
+from django.views.generic import ListView
 
 from .models import Tournament
 
@@ -14,7 +15,7 @@ def schedule_view(request):
 
 def results(request):
     message = 'hello world from schedule results!'
-    return render(request, 'schedule/main.html', {'h': message})
+    return render(request, 'schedule/results.html', {'h': message})
 
 def detail(request, tournament_id):
     # message = 'tournament id ' + tournament_id
@@ -24,3 +25,7 @@ def detail(request, tournament_id):
     except Tournament.DoesNotExist:
         raise Http404("Tournament does not exist")
     return render(request, 'schedule/detail.html', {'tournament': tournament})
+
+class TournamentListView(ListView):
+    model = Tournament
+    template_name = 'schedule/main.html'
