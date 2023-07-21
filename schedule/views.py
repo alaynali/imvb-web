@@ -27,5 +27,6 @@ def detail(request, tournament_id):
     return render(request, 'schedule/detail.html', {'tournament': tournament})
 
 class TournamentListView(ListView):
-    model = Tournament
     template_name = 'schedule/main.html'
+    queryset = Tournament.objects.order_by('start_date') #'-start_date flips the order
+    paginate_by = 10
