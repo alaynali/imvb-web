@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.shortcuts import reverse
 
 # Create your models here.
 
@@ -19,8 +20,9 @@ class Tournament(models.Model):
             return f"{self.name} | {self.start_date.strftime('%m/%d/%y')}-{self.end_date.strftime('%m/%d/%y')}"
         else:
             return f"{self.name} | {self.start_date.strftime('%m/%d/%y')}" 
-    
-    # def save(self, *args, **kwargs):
+        
+    def get_absolute_url(self):
+        return reverse("schedule:detail", kwargs={"pk": self.pk})
 
     # def save(self, *args, **kwargs):
     #     if not self.id:

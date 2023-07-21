@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
 {% block title %}
-Schedule
+Schedule - History
 {% endblock title %}
 
 {% block content %}
 <br><br>
 tournament list <br><br>
 {% for obj in object_list %}
-    {{obj}} <br> 
+    <a href= "{{obj.get_absolute_url}}">{{obj}}</a> <br> 
     {{obj.description}} <br> <br>
 {% endfor %}
 {% endblock content %}

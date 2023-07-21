@@ -10,6 +10,7 @@ urlpatterns = [
     # /schedule/history
     path('history/', views.PastTournamentList.as_view(), name='history'),
     # ex: /schedule/071723/
-    path('<str:tournament_id>/', views.detail, name='detail')
+    #path('<str:tournament_id>/', views.detail, name='detail')
+    path('<pk>/', views.TournamentDetailView.as_view(), name='detail')
     
 ]

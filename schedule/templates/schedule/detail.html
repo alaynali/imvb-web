@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 
 {% block title %}
-Schedule
+{% comment %} Schedule - {{tournament.name}} {% endcomment %}
+Schedule - {{object.name}}
 {% endblock title %}
 
 {% block content %}
-{{ tournament }}
+<br>
+{% comment %} {{ tournament }} {% endcomment %}
+{{ object }}
 {% endblock content %}

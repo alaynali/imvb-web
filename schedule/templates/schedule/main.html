@@ -6,9 +6,11 @@ Schedule
 
 {% block content %}
 <br><br>
-tournament list <br><br>
+tournament list <br>
+<a href="history/">see previous tournaments</a> <br>
+<br><br>
 {% for obj in object_list %}
-    {{obj}} <br> 
+    <a href= "{{obj.get_absolute_url}}">{{obj}}</a> <br> 
     {{obj.description}} <br> <br>
 {% endfor %}
 {% endblock content %}
