@@ -38,7 +38,7 @@ class Event(models.Model):
 
     def __str__(self):
         if self.end_date:
-            return f"{self.name} | {self.start_date.strftime('%m/%d/%y')}-{self.end_date.strftime('%m/%d/%y')}"
+            return f"{self.name} | {self.start_date.strftime('%m/%d/%y')} - {self.end_date.strftime('%m/%d/%y')}"
         else:
             return f"{self.name} | {self.start_date.strftime('%m/%d/%y')}" 
     

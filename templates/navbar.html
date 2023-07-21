@@ -2,7 +2,11 @@
 <!-- https://getbootstrap.com/docs/5.2/components/navbar/ -->
 <nav class="navbar navbar-expand-lg fixed-top navbarScroll navbar-dark text">
     <div class="container">
-        <a class="navbar-brand" href="#">University of Illinois Men's Volleyball Club</a>
+        <a class="navbar-brand" href="../..">
+            <!-- dimensions 1400px by 2000px -->
+            <img src="../../media/illinois_logo.png" width="42" height="60">
+            {% comment %} University of Illinois Men's Volleyball Club {% endcomment %}
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -18,7 +22,10 @@
                     <a class="nav-link" href="../../schedule/">Schedule</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Store</a>
+                    <a class="nav-link" href="#">
+                        Store
+                        <img src="../../media/redirect.png" width="15" height="15">
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
