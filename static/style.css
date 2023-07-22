@@ -120,6 +120,7 @@ white:
     font-style: normal;
 }
 
+/* override hyperlink <a> tag*/
 a {
     color: #13294B;
     text-decoration: none;
@@ -130,3 +131,8 @@ a:hover {
     text-decoration:none; 
     cursor:pointer;  
 }
+
+/* Solid border */
+hr.solid {
+    border-top: 3px solid #bbb;
+  }
