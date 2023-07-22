@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+Teams
+{% endblock title %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+            background-color: #DDDEDE
+        }
+    </style>
+    <body>
+        <section class="container section" id="heading"> 
+            <h1 class="title">Teams</h2>
+            <p class="text">
+                The Illinois Men's Volleyball Club has three competitive teams. 
+            </p>
+        {{h}}
+        hello world from main!
+        </section>
+        <section class="container section" id="illini-1s">
+            <div class="mt-4 pt-4">
+                <h2 class="title">Illini 1s Roster</h1>
+                {% for obj in object_list %}
+                <h5 class="heading"> {{obj.first_name}} {{obj.last_name}}</h2>
+                <div class="text">
+                    <p>{{obj.height}} | {{obj.position}}</p>
+                </div>
+                 
+                {% endfor %}
+            </div>
+        </section>
+        <section class="container section" id="illini-2s">
+            <div>
+                
+            </div>
+        </section>
+        <section class="container section" id="illini-3s">
+            <div>
+                
+            </div>
+        </section>
+    </body>
+</html>
+
+
+{% endblock content %}

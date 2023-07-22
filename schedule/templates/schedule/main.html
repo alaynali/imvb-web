@@ -15,14 +15,16 @@ Schedule
         <section class="container section" id="schedule">
             <div>
                 <h2 class="title">Upcoming tournaments</h2><br>
-                <a class="text" href="history/">Past tournaments</a><br><br>
+                <a class="text" href="history/">View past tournaments</a><br><br>
             </div>
             <div class="mt-4 pt-4">
+                <hr class="solid">
                 {% for obj in object_list %}
                 <a class="heading" href="{{obj.get_absolute_url}}">{{obj.name}}</a> <br> 
                 <div class="text">
                     <p>{{obj.start_date}} - {{obj.end_date}}</p>
                     <p>{{obj.description}}</p><br>
+                    <hr class="solid">
                 </div>
                  
                 {% endfor %}

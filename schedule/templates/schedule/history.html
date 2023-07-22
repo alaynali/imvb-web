@@ -8,14 +8,32 @@ Schedule - History
 <html lang="en">
     <style>
         body {
-            background-color: rgb(0, 159, 212)
+            background-color: #DDDEDE
         }
     </style>
+    <section class="container section">
+        <div>
+            <h2 class="title">Past tournaments</h2><br>
+            <a class="text" href="../">View upcoming tournaments</a><br><br>
+        </div>
+        <div class="mt-4 pt-4">
+            <hr class="solid">
+            {% for obj in object_list %}
+            <a class="heading" href="{{obj.get_absolute_url}}">{{obj.name}}</a> <br> 
+            <div class="text">
+                <p>{{obj.start_date}} - {{obj.end_date}}</p>
+                <p>{{obj.description}}</p><br>
+                <hr class="solid">
+            </div>
+             
+            {% endfor %}
+        </div>
+    </section>
 </html>
-<br><br>
+{% comment %} <br><br>
 tournament list <br><br>
 {% for obj in object_list %}
     <a href= "{{obj.get_absolute_url}}">{{obj}}</a> <br> 
     {{obj.description}} <br> <br>
-{% endfor %}
+{% endfor %} {% endcomment %}
 {% endblock content %}
