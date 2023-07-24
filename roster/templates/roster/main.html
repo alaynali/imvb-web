@@ -25,16 +25,16 @@ Teams
             <div class="mt-4 pt-4">
                 <h2 class="title">Illini 1s Roster</h2>
                     
-                    {% for obj in object_list %}
+                    {% for player in data.first %}
 
                     <div class="row mt-4 pt-4">
                         <div class="col-sm-6 col-md-4 col-lg-3 player">
-                            <img src="{{obj.image.url}}"></img>
+                            <img src="{{player.image.url}}"></img>
                         </div>
                         <div class="col-sm-6 col-md-8 col-lg-9 pt-4">
-                            <h5 class="heading">{{obj.first_name}} {{obj.last_name}}</h5>
-                            <span class="text">{{obj.height}} | {{obj.position}}</span><br>
-                            <span class="text">{{obj.major}}</span>
+                            <h5 class="heading">{{player.first_name}} {{player.last_name}}</h5>
+                            <span class="text">{{player.height}} | {{player.position}}</span><br>
+                            <span class="text">{{player.major}}</span>
                         </div>
                     </div>
 
@@ -45,11 +45,43 @@ Teams
         </section>
         <section class="container section" id="illini-2s">
             <div>
+                <h2 class="title">Illini 2s Roster</h2>
+                    
+                    {% for player in data.second %}
+
+                    <div class="row mt-4 pt-4">
+                        <div class="col-sm-6 col-md-4 col-lg-3 player">
+                            <img src="{{player.image.url}}"></img>
+                        </div>
+                        <div class="col-sm-6 col-md-8 col-lg-9 pt-4">
+                            <h5 class="heading">{{player.first_name}} {{player.last_name}}</h5>
+                            <span class="text">{{player.height}} | {{player.position}}</span><br>
+                            <span class="text">{{player.major}}</span>
+                        </div>
+                    </div>
+
+                    {% endfor %}
                 
             </div>
         </section>
         <section class="container section" id="illini-3s">
             <div>
+                <h2 class="title">Illini 3s Roster</h2>
+                    
+                    {% for player in data.third %}
+
+                    <div class="row mt-4 pt-4">
+                        <div class="col-sm-6 col-md-4 col-lg-3 player">
+                            <img src="{{player.image.url}}"></img>
+                        </div>
+                        <div class="col-sm-6 col-md-8 col-lg-9 pt-4">
+                            <h5 class="heading">{{player.first_name}} {{player.last_name}}</h5>
+                            <span class="text">{{player.height}} | {{player.position}}</span><br>
+                            <span class="text">{{player.major}}</span>
+                        </div>
+                    </div>
+
+                    {% endfor %}
                 
             </div>
         </section>
