@@ -23,14 +23,24 @@ Teams
         </section>
         <section class="container section" id="illini-1s">
             <div class="mt-4 pt-4">
-                <h2 class="title">Illini 1s Roster</h1>
-                {% for obj in object_list %}
-                <h5 class="heading"> {{obj.first_name}} {{obj.last_name}}</h2>
-                <div class="text">
-                    <p>{{obj.height}} | {{obj.position}}</p>
-                </div>
+                <h2 class="title">Illini 1s Roster</h2>
+                    
+                    {% for obj in object_list %}
+
+                    <div class="row mt-4 pt-4">
+                        <div class="col-sm-6 col-md-4 col-lg-3 player">
+                            <img src="{{obj.image.url}}"></img>
+                        </div>
+                        <div class="col-sm-6 col-md-8 col-lg-9 pt-4">
+                            <h5 class="heading">{{obj.first_name}} {{obj.last_name}}</h5>
+                            <span class="text">{{obj.height}} | {{obj.position}}</span><br>
+                            <span class="text">{{obj.major}}</span>
+                        </div>
+                    </div>
+
+                    {% endfor %}
                  
-                {% endfor %}
+                
             </div>
         </section>
         <section class="container section" id="illini-2s">

@@ -106,15 +106,15 @@ white:
     font-size: 36px;
     cursor: pointer;
 }
-.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-    color: #008000;
+.fa-instagram:hover,.fa-twitter:hover,.fa-twitch:hover {
+    color: white;
 }
 .fab {
-    color: #000000;
+    color: #E8E9EB;
 }
 /* footer styling */
 #footer {
-    background-color: #808080;
+    background-color: #13294B;
     text-align: center;
 }
 
@@ -152,14 +152,22 @@ a {
     color: #13294B;
     text-decoration: none;
 }
-
 a:hover {
     color:#1E3877; 
     text-decoration:none; 
     cursor:pointer;  
 }
 
-/* Solid border */
+/* solid border */
 hr.solid {
     border-top: 3px solid #bbb;
-  }
+}
+
+/* formatting for player image */
+.player img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: auto;    
+    display: block;
+}
