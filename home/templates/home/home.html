@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load static %}
 
 {% block title %}
 Homepage
@@ -28,20 +27,92 @@ Homepage
         </section>
         <section class="container section" id="about">
             <div class="row mt-3">
-                <h2 class="heading">Illinois Men's Volleyball Club</h1>
-                <p class="text">The University of Illinois' Volleyball Club, now with a 
-                brand spanking new website.
-                </p>
-                <p class="text"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<br>
+                <h2 class="heading">About Us</h1>
+                <div class="col-7">
+                    <p class="text">The University of Illinois' Volleyball Club, now with a 
+                    brand spanking new website.
+                    </p>
+                    <p class="text"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<br>
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<br>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Lorem donec massa sapien faucibus. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Semper eget duis at tellus. Vulputate odio ut enim blandit volutpat. Est pellentesque elit ullamcorper dignissim cras tincidunt. In tellus integer feugiat scelerisque varius. Vitae congue eu consequat ac felis donec. Congue mauris rhoncus aenean vel elit scelerisque.<br>
-                    Vitae semper quis lectus nulla at. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Quis auctor elit sed vulputate mi sit. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Accumsan lacus vel facilisis volutpat. Imperdiet sed euismod nisi porta lorem mollis aliquam ut. In aliquam sem fringilla ut morbi tincidunt augue interdum velit. Quam pellentesque nec nam aliquam sem et tortor consequat. Purus sit amet volutpat consequat. Ipsum faucibus vitae aliquet nec ullamcorper. Lectus urna duis convallis convallis tellus id interdum velit. Adipiscing diam donec adipiscing tristique risus nec. Integer eget aliquet nibh praesent tristique magna. Faucibus turpis in eu mi bibendum. Ut ornare lectus sit amet est. Egestas pretium aenean pharetra magna ac placerat vestibulum.<br>
-                    Dignissim sodales ut eu sem integer. Sed turpis tincidunt id aliquet. Leo vel orci porta non. Tempus egestas sed sed risus pretium quam vulputate dignissim. Sed arcu non odio euismod lacinia at. Nullam eget felis eget nunc. Nulla facilisi morbi tempus iaculis urna id volutpat lacus. Vulputate eu scelerisque felis imperdiet. Nibh venenatis cras sed felis. Lacinia at quis risus sed vulputate odio ut enim blandit. Arcu felis bibendum ut tristique.
+                    </p>
+                </div>
+                <div class="col-5">
+                    <div id="annoucementCarousel" class="carousel slide" data-bs-ride ="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#annoucementCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#annoucementCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#annoucementCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="https://www.commonapp.org/static/66f3783a4c5c2ebcdea0fa274a6c5388/university-illinois-urbana-champaign_1165.jpg" alt="First slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="heading">Welcome!</h5>
+                                    <p></p>
+                                </div>
+                            </div>
 
+                            {% for obj in data %}
+                            
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="{{obj.image.url}}">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="heading">{{obj.name}}</h5>
+                                    <p>{{obj.description}}</p>
+                                </div>
+                            </div>
 
-                </p>
+                            {% endfor %}
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#annoucementCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#annoucementCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                    </div> 
+
+                </div> 
             </div>
-       
+            <!-- carousel -->
+            {% comment %} <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="..." alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="..." alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="..." alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div> {% endcomment %}
+    
+        <script>
+            const myCarouselElement = document.querySelector('#annoucementCarousel')
+
+            const carousel = new bootstrap.Carousel(myCarouselElement, {
+                interval: 2000
+            })
+        </script>
     </body>
 </html>
 {{h}}

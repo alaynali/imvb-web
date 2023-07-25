@@ -4,7 +4,7 @@ from django.db import models
 
 class Announcement(models.Model):
     name = models.CharField(max_length=200)
-    image = models.ImageField()
+    image = models.ImageField(upload_to='home')
     description = models.TextField(max_length=500)
     hyperlink = models.URLField()
 

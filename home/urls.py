@@ -1,8 +1,8 @@
 from django.urls import path
-from home.views import home_view
+from . import views
 
 app_name = 'home'
 
 urlpatterns = [
-    path('', home_view, name='homepage'),
+    path('', views.AnnouncementCarousel.as_view(), name='homepage'),
 ]
