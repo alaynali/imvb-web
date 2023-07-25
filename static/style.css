@@ -171,3 +171,14 @@ hr.solid {
     margin: auto;    
     display: block;
 }
+
+/* carousel images */
+/* .carousel-inner > .item >img{
+    min-height : 300px;
+    max-height : 300px;
+    width : 100%;
+  } */
+
+#footer {
+    background-color: #1E3877;
+}

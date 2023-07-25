@@ -1,12 +1,48 @@
- <!-- footer -->
- <footer id="footer">
-    <div class="container-fluid">
-        <!-- social media icons -->
-        <div class="social-icons mt-4">
-            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+ 
+ {% block content %}
+ <!doctype html>
+ <html>
+    <footer class="text-center text-white" id="footer">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+            ></a>
+    
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/IllinoisMensVB" target="_blank" role="button"
+            ><i class="fa-brands fa-twitter"></i></i
+            ></a>
+    
+            <!-- YouTube -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/playlist?list=PLlHTnw6JPRCTqFZnA71D8nmbh15-yoRtH" target="_blank" role="button"
+            ><i class="fa-solid fa-play"></i></i
+            ></a>
+    
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/illinoismensvolleyballclub/" target="_blank" role="button"
+            ><i class="fa-brands fa-instagram"></i></i
+            ></a>
+    
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-linkedin-in"></i
+            ></a>
+    
+        </section>
+        <!-- Section: Social media -->
         </div>
-    </div>
-</footer>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">University of Illinois</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</html>
+{% endblock content %}
