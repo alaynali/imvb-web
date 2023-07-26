@@ -43,6 +43,10 @@ white:
         (3) hex #D2D2D2
 
 */
+/* 
+html { 
+    height: 100%; 
+} */
 
 /* spacing on all sections */
 .section {
@@ -112,11 +116,6 @@ white:
 .fab {
     color: #E8E9EB;
 }
-/* footer styling */
-#footer {
-    background-color: #13294B;
-    text-align: center;
-}
 
 /* Modify the navbar background color */
 .navbar-custom {
@@ -178,7 +177,18 @@ hr.solid {
     max-height : 300px;
     width : 100%;
   } */
+.carousel {
+    max-height: 300px;
+    max-width: 500px;
+}
+ 
+.carousel-inner > .carousel-item > img {
+    height: 300px;
+    width: 500px;
+    object-fit: cover;
+    margin: 0 auto;
+}
 
-#footer {
+.footer {
     background-color: #1E3877;
 }
