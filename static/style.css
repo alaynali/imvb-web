@@ -43,10 +43,6 @@ white:
         (3) hex #D2D2D2
 
 */
-/* 
-html { 
-    height: 100%; 
-} */
 
 /* spacing on all sections */
 .section {
@@ -56,6 +52,21 @@ html {
 .section:last-of-type {
     padding-bottom: 4rem;
 }
+
+/* background color for all pages */
+.background-color {
+    min-height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background: rgb(221,222,222);
+    background: -moz-linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(30,56,119,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(30,56,119,1) 100%);
+    background: linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(30,56,119,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dddede",endColorstr="#1e3877",GradientType=1);
+}
+
 
 /* hero background image*/
 .bgimage {
@@ -148,13 +159,16 @@ html {
 
 /* override hyperlink <a> tag*/
 a {
-    color: #13294B;
+    /* color: #13294B; */
+    color: #C84113;
     text-decoration: none;
+    font-weight: bold;
 }
 a:hover {
-    color:#1E3877; 
-    text-decoration:none; 
-    cursor:pointer;  
+    color: #FF5F05; 
+    text-decoration: none; 
+    font-weight: bold;
+    cursor: pointer;  
 }
 
 /* solid border */
@@ -171,27 +185,63 @@ hr.solid {
     display: block;
 }
 
-/* carousel images */
-/* .carousel-inner > .item >img{
-    min-height : 300px;
-    max-height : 300px;
-    width : 100%;
-  } */
 .carousel {
     max-height: 300px;
     max-width: 500px;
     margin: auto;
     display: block;
 }
- 
 .carousel-inner > .carousel-item > img {
     height: 300px;
     width: 500px;
     object-fit: cover;
     margin: auto;
     display: block;
+    border-radius: 25px;
+}
+.carousel-item {
+    position: relative;
+}
+.carousel-item::after {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    display:inline-block;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,0,0,0.8590029761904762) 85%);
+    background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,0,0,0.8590029761904762) 85%);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,0,0,0.8590029761904762) 85%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+}
+.carousel-caption {
+    z-index: 1;
 }
 
+
 .footer {
-    background-color: #1E3877;
+    background: rgb(19,41,75);
+    /* background: linear-gradient(90deg, rgba(19,41,75,1) 0%, rgba(0,159,212,1) 52%, rgba(245,130,30,1) 100%); */
+}
+
+.announcement img {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
+
+
+.tournament-name {
+    color: #13294B
+}
+.tournament-name:hover {
+    color: #1E3877; 
+    cursor: pointer;  
 }

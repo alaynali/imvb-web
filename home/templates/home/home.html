@@ -7,11 +7,6 @@ Homepage
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        body {
-            background-color: #DDDEDE
-        }
-    </style>
     <body>
         <!-- main banner -->
         <!-- https://getbootstrap.com/docs/5.2/layout/containers/ -->
@@ -30,8 +25,8 @@ Homepage
                 <div class="col-6">
                     <h2 class="heading">About Us</h1>
                     <p class="text"> 
-                        The University of Illinois' Men's Volleyball Team is a registered RSO and Club Sport 
-                        at the University of Illinois at Urbana Champaign. Our team competes in the 
+                        The University of Illinois' Men's Volleyball Team is a registered student organization (RSO)
+                        and Club Sport at the University of Illinois at Urbana Champaign. Our team competes in the 
                         <a href="https://ncvf.org/">National Club Volleyball Federation</a> (NCVF) and the 
                         <a href="https://www.miva-vball.org/">Midwest Intercollegiate Volleyball Association </a> (MIVA). 
                         The club is entirely student-run by executive board members and team captains and consists of 3 teams. 
@@ -39,12 +34,12 @@ Homepage
                 </div>
                 <div class="col-6">
                     <div id="annoucementCarousel" class="carousel slide" data-bs-ride ="carousel">
-                        <div class="carousel-indicators">
+                        {% comment %} <div class="carousel-indicators">
                           <button type="button" data-bs-target="#annoucementCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                           <button type="button" data-bs-target="#annoucementCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                           <button type="button" data-bs-target="#annoucementCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                           <button type="button" data-bs-target="#annoucementCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        </div>
+                        </div> {% endcomment %}
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img class="d-block w-100" src="https://www.commonapp.org/static/66f3783a4c5c2ebcdea0fa274a6c5388/university-illinois-urbana-champaign_1165.jpg" alt="First slide">
@@ -79,7 +74,27 @@ Homepage
 
                 </div> 
             </div>
+        </section>
+        
+        <section class="container section">
+            <hr class="solid">
+            {% for obj in data.announcements %}
+            <div class='container mt-4 pt-4 text-center announcement'>
+                <h2 class='title'>{{obj.name}}</h2>
+                {% if obj.image %}
+                <img src='{{obj.image.url}}'></img>
+                {% endif %}
+                <p class='text'> {{obj.description}}</p>
+            
+            {% if obj.button_name %}
+                {% if obj.button_hyperlink %}
+                <button type="button" class="btn btn-outline-dark">{{obj.button_name}}</button>
+                {% endif %}
+            {% endif %}
+            </div>
+            {% endfor %}
 
+        </section>
     </body>
 </html>
 {{h}}
