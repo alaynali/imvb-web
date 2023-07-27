@@ -8,13 +8,14 @@ Schedule - {{object.name}}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        body {
-            background-color: #DDDEDE
-        }
-    </style>
+    <section class="container section">
+        <div>
+            <h3 class="title">{{object.name}}</h3>
+            <p class="text">{{object.description}}</p>
+        </div>
+    </section>
 </html>
 <br>
 {% comment %} {{ tournament }} {% endcomment %}
-{{ object }}
+
 {% endblock content %}
