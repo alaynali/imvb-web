@@ -39,7 +39,8 @@
     <body>
         {% include 'navbar.html' %}
         <!-- mt-3 margin of 3 mb-3 margin block of 3 -->
-        <div class="background-color">
+        {% comment %} <div class="background-color"> {% endcomment %}
+        <div>
             {% block content %}
             {% endblock content %}
         </div>
