@@ -50,7 +50,7 @@ white:
     padding-top: 4rem;
 }
 .section:last-of-type {
-    padding-bottom: 4rem;
+    padding-bottom: 8rem;
 }
 
 /* background color for all pages */
@@ -61,10 +61,10 @@ white:
     background-size: cover;
     background-repeat:no-repeat;
     background: rgb(221,222,222);
-    background: -moz-linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(30,56,119,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(30,56,119,1) 100%);
-    background: linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(30,56,119,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dddede",endColorstr="#1e3877",GradientType=1);
+    background: -moz-linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(19,41,75,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(19,41,75,1) 100%);
+    background: linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(19,41,75,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dddede",endColorstr="#13294b",GradientType=1);
 }
 
 
