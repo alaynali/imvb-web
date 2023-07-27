@@ -180,13 +180,16 @@ hr.solid {
 .carousel {
     max-height: 300px;
     max-width: 500px;
+    margin: auto;
+    display: block;
 }
  
 .carousel-inner > .carousel-item > img {
     height: 300px;
     width: 500px;
     object-fit: cover;
-    margin: 0 auto;
+    margin: auto;
+    display: block;
 }
 
 .footer {

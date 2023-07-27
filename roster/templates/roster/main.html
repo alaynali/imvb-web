@@ -16,10 +16,11 @@ Teams
         <section class="container section" id="heading"> 
             <h1 class="title">Teams</h2>
             <p class="text">
-                The Illinois Men's Volleyball Club has three competitive teams. 
+                IMVB is divided into three teams: the 1s, 2s, and 3s. Club leaders determine teams at the beginning 
+                of the season based on skill level. <br>The 1s team competes in NCVF Division I A while the 2s and 3s 
+                compete in NCVF Division III against other B and C teams. All three teams maintain the 
+                goal of competing at a high level.
             </p>
-        {{h}}
-        hello world from main!
         </section>
         <section class="container section" id="illini-1s">
             <div class="mt-4 pt-4">
@@ -28,6 +29,7 @@ Teams
                     {% for player in data.first %}
 
                     <div class="row mt-4 pt-4">
+                        <!-- 50%/50% split on small devices, 25%/75% split on medium and large devices. On extra small devices, it will automatically stack (100%) -->
                         <div class="col-sm-6 col-md-4 col-lg-3 player">
                             <img src="{{player.image.url}}"></img>
                         </div>
