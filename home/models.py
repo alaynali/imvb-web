@@ -15,7 +15,7 @@ class Announcement(models.Model):
     name = models.CharField(max_length=200)
     image = models.ImageField(upload_to='home', blank=True)
     description = models.TextField(max_length=1000)
-    button_name = models.TextField(max_length=50, blank=True)
+    button_name = models.CharField(max_length=50, blank=True)
     button_hyperlink = models.URLField(blank=True)
     created = models.DateTimeField(auto_now_add=True)
 
