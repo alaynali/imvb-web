@@ -88,7 +88,9 @@ Homepage
             
             {% if obj.button_name %}
                 {% if obj.button_hyperlink %}
-                <button type="button" class="btn btn-outline-dark">{{obj.button_name}}</button>
+                <form action="{{obj.button_hyperlink}}" target="_blank">
+                    <button type="submit" class="btn btn-outline-dark">{{obj.button_name}}</button>
+                </form>
                 {% endif %}
             {% endif %}
             </div>
