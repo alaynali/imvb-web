@@ -1,0 +1,263 @@
+/*
+illinois brand colors
+
+oranges:
+    illini orange
+        rgb(255, 95, 5)
+        hex #FF5F05
+        (1-altgeld) hex #C84113
+    heritage orange
+        rgb(245, 130, 30)
+        hex #F5821E
+        (1) hex #E56E15
+        (2) hex #CE5E11
+        (3) hex #B74D04
+blues:
+    illini blue
+        rgb(19, 41, 75)
+        hex #13294B
+    alma mater
+        rgb(30, 56, 119)
+        hex #1E3877
+        (-1) hex #4D69A0
+        (-2) hex #849BC1
+        (-3) hex #AFC7DB
+    industrial blue
+        rgb(29, 88, 167)
+        hex #1D58A7
+        (-1) hex #5783BC
+        (-2) hex #90AED5
+        (-3) hex #CAD9EF
+    arches blue
+        rgb(0, 159, 212)
+        hex #009FD4
+        (-1) hex #7FC3E1
+        (-2) hex #A6D7EB
+        (-3) hex #D2EBF5
+white:
+    cloud
+        rgb(248, 250, 252)
+        hex #F8FAFC
+        (1) hex #E8E9EB
+        (2) hex #DDDEDE
+        (3) hex #D2D2D2
+
+*/
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #DDDEDE;
+}
+
+/* spacing on all sections */
+.section {
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+.section:last-of-type {
+    padding-bottom: 8rem;
+}
+
+/* background color for all pages */
+.background-color {
+    min-height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background: rgb(221,222,222);
+    background: -moz-linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(19,41,75,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(19,41,75,1) 100%);
+    background: linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(19,41,75,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dddede",endColorstr="#13294b",GradientType=1);
+}
+
+
+/* hero background image*/
+.bgimage {
+    min-height:100vh;
+    background: url('../../media/hero_image.jpeg');
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    /* for parallax scrolling */
+    background-size: cover;
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bgimage::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+/* text css above hero image */
+.hero_title {
+    padding-top: 10rem;
+    font-size: 4.5rem;
+}
+.hero_desc {
+    font-size: 2rem;
+}
+.hero_text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(248, 250, 252); /* illinois 'cloud' */
+    text-shadow: 0 0 5px black;
+}
+
+/* Modify the navbar background color */
+.navbar-custom {
+    background-color: rgba(0,0,0,0.5);
+}
+/* change navbar color on scroll */
+.navbarDark {
+    background-color: rgba(57, 44, 44, 0.2);
+    /* background-image: linear-gradient(to bottom, rgba(210, 210, 210, .8) 0%, rgba(221, 222, 222, .2) 100%); */
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.heading {
+    font-family: 'Georgia', serif;
+    font-weight: 500;
+}
+.text {
+    font-family: "source-sans-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* override hyperlink <a> tag*/
+a {
+    /* color: #13294B; */
+    color: #C84113;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #FF5F05; 
+    text-decoration: none; 
+    font-weight: bold;
+    cursor: pointer;  
+}
+
+/* solid border */
+hr.solid {
+    border-top: 3px solid #bbb;
+}
+
+/* formatting for player image */
+.player img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: auto;    
+    display: block;
+}
+
+.carousel {
+    max-height: 300px;
+    max-width: 500px;
+    margin: auto;
+    display: block;
+}
+.carousel-inner > .carousel-item > img {
+    height: 300px;
+    width: 500px;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+    border-radius: 25px;
+}
+.carousel-item {
+    position: relative;
+}
+.carousel-item::after {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    display:inline-block;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,0,0,0.8590029761904762) 85%);
+    background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,0,0,0.8590029761904762) 85%);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,0,0,0.8590029761904762) 85%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+}
+.carousel-caption {
+    z-index: 1;
+}
+
+
+footer {
+    background: rgb(19,41,75);
+    margin-top: auto;
+    /* background: linear-gradient(90deg, rgba(19,41,75,1) 0%, rgba(0,159,212,1) 52%, rgba(245,130,30,1) 100%); */
+}
+/* social media icons styling */
+.social-icons {
+    font-size: 36px;
+    cursor: pointer;
+}
+.fab {
+    color: #E8E9EB;
+}
+.footer-contact {
+    text-align: left;
+    margin: auto;
+    display: block;
+}
+.footer-logo {
+    object-fit: contain;
+    max-width:100%;
+    max-height:100%;
+}
+
+.announcement img {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
+
+
+.tournament-name {
+    color: #13294B
+}
+.tournament-name:hover {
+    color: #1E3877; 
+    cursor: pointer;  
+}

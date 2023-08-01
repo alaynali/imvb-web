@@ -80,10 +80,11 @@ body {
 /* hero background image*/
 .bgimage {
     min-height:100vh;
-    background: url('../media/hero_image.jpeg');
+    background: url('../../media/hero_image.jpeg');
     position: relative;
     padding: 0;
     margin: 0;
+
 
     /* for parallax scrolling */
     background-size: cover;
@@ -100,6 +101,7 @@ body {
     left: 0px;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
     .parallax {
