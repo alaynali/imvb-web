@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-0ztx)1&la^zlfnn%o4_tnm7x#fh**p8e!jjp&m+9u49j#@rag0"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'www.mensvolleyball.illinois.edu']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.mensvolleyball.web.illinois.edu', 'mensvolleyball.web.illinois.edu']
 
 
 # Application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages", # messaging framework
     "django.contrib.staticfiles", # framework for managing static files
     # our apps
-    'home', # homepage
+    'home.apps.HomeConfig', # homepage
     'schedule',
     'roster',
     # 3rd party
