@@ -80,7 +80,8 @@ body {
 /* hero background image*/
 .bgimage {
     min-height:100vh;
-    background: url('../../media/hero_image.jpeg');
+    /* background: url('../../media/hero_image.jpeg'); */
+    background: url('/static/hero_image.jpeg');
     position: relative;
     padding: 0;
     margin: 0;

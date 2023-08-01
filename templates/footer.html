@@ -1,11 +1,11 @@
- 
+ {% load static %}
  {% block content %}
  <!doctype html>
  <html>
     <footer class="text-center text-white footer">
         <div class="row container mt-4">
             <div class="col-sm-10 col-md-9 col-lg-8 pt-4 container">
-                <img src="../../media/wordmark-blue-background.png" class="img-fluid"></img>
+                <img src="{% static 'wordmark-blue-background.png'%}" class="img-fluid"></img>
             </div>
             <div class="col-sm-2 col-md-3 col-lg-4 pt-4 footer-contact container">
                 <h4 class='title'>Contact</h5>

@@ -135,7 +135,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static', 
 ]
 
-MEDIA_URL = 'http://media.mensvolleyball.web.illinois.edu/'
+MEDIA_URL = 'https://media.mensvolleyball.web.illinois.edu/'
 MEDIA_ROOT = "/home/mensvolleyball/media.mensvolleyball.web.illinois.edu/"
 
 # Default primary key field type
