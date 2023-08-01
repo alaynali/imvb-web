@@ -136,7 +136,7 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = 'http://media.mensvolleyball.web.illinois.edu/'
-MEDIA_ROOT = "/home/mensvolleyball/repositories/imvb-web/media/"
+MEDIA_ROOT = "/home/mensvolleyball/media.mensvolleyball.web.illinois.edu/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
