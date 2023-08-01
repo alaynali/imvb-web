@@ -25,7 +25,12 @@ SECRET_KEY = "django-insecure-0ztx)1&la^zlfnn%o4_tnm7x#fh**p8e!jjp&m+9u49j#@rag0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'www.mensvolleyball.web.illinois.edu', 'mensvolleyball.web.illinois.edu']
+ALLOWED_HOSTS = [
+    '127.0.0.1', 
+    'www.mensvolleyball.web.illinois.edu', 
+    'mensvolleyball.web.illinois.edu', 
+    'media.mensvolleyball.web.illinois.edu',
+]
 
 
 # Application definition
