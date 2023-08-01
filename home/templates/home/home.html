@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 Homepage
@@ -13,6 +14,7 @@ Homepage
         <!-- https://getbootstrap.com/docs/5.2/layout/grid/ -->
 
         <section class="container-fluid section bgimage" id="home">
+            {% comment %} <img src="{% static 'home/hero_image.jpeg' %}"></img> {% endcomment %}
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 cos-xs-12 hero_text">
                     <h2 class="hero_title title">University of Illinois</h2>
@@ -42,7 +44,7 @@ Homepage
                         </div> {% endcomment %}
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="https://www.commonapp.org/static/66f3783a4c5c2ebcdea0fa274a6c5388/university-illinois-urbana-champaign_1165.jpg" alt="First slide">
+                                <img class="d-block w-100" src="{% static 'home/uoficampus.jpeg' %}" alt="First slide">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5 class="heading">Welcome!</h5>
                                     <p></p>
