@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'schedule',
     'roster',
     # 3rd party
-    'crispy_forms'
+    'crispy_forms',
     'django_cleanup.apps.CleanupConfig',
 
 ]
