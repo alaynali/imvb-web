@@ -6,7 +6,7 @@ class Photo(models.Model):
     name = models.CharField(max_length=50)
     image = models.ImageField(upload_to='home')
     description = models.TextField(max_length=100)
-    hyperlink = models.URLField()
+    # hyperlink = models.URLField()
 
     def __str__(self):
         return f"{self.name}"
