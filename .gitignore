@@ -1,6 +1,5 @@
 __pycache__/
 home/__pycache__/
-imvb_web/__pycache__/
 roster/__pycache__/
 schedule/__pycache__/
 db.sqlite3
