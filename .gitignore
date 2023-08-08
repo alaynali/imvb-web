@@ -2,4 +2,4 @@ __pycache__/
 # home/__pycache__/
 # roster/__pycache__/
 # schedule/__pycache__/
-# db.sqlite3
+db.sqlite3
