@@ -8,9 +8,12 @@ class Tournament(models.Model):
     name = models.CharField(max_length=200)
     # team = models.CharField(max_length=100)
     start_date = models.DateField()
-    end_date = models.DateField(blank=True, null=True)
+    end_date = models.DateField(blank=True, null=True, help_text="This field is optional.")
     description = models.TextField(blank=True)
     image = models.ImageField(blank=True)
+    result_text = models.TextField(blank=True)
+    result_link = models.URLField(blank=True, help_text="Paste a link to a results page (e.g. MIVA bracket).")
+    
     # tournament_id = models.CharField(editable=False, default=str(start_date), max_length=10)
     # created = models.DateTimeField(auto_now_add=True)
     # updated = models.DateTimeField(auto_now=True)

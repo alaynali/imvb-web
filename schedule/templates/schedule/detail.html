@@ -9,9 +9,22 @@ Schedule - {{object.name}}
 <!DOCTYPE html>
 <html lang="en">
     <section class="container section">
-        <div>
+        <div class="mt-4 pt-4">
             <h3 class="title">{{object.name}}</h3>
             <p class="text">{{object.description}}</p>
+        </div>
+        <div class="mt-4 pt-4">
+            <h5 class="heading">Results</h5>
+            {% if object.result_text or object.result_link %}
+                <p class="text">{{object.result_text}}</p>
+                {% if not object.result_text %}
+                    <a href="{{object.result_link}}">See results</a>
+                {% else %}
+                    <a href="{{object.result_link}}">See more about these results</a>
+                {% endif %}
+            {% else %}
+                <p class="text">Results not available.</p>
+            {% endif %}
         </div>
     </section>
 </html>

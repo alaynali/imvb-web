@@ -17,7 +17,11 @@ Schedule
             <div class="mt-4 pt-4">
                 <a href="{{obj.get_absolute_url}}"><h5 class="heading">{{obj.name}}</h5></a> <br> 
                 <div class="text">
-                    <p>{{obj.start_date}} - {{obj.end_date}}</p>
+                    {% if obj.end_date %}
+                        <p>{{obj.start_date}} - {{obj.end_date}}</p>
+                    {% else %}
+                        <p>{{obj.start_date}}</p>
+                    {% endif %}
                     <p>{{obj.description}}</p><br>
                 </div>
                 {% empty %}

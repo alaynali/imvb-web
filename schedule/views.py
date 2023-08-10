@@ -30,16 +30,17 @@ from .models import Tournament
 
 class UpcomingTournamentList(ListView):
     template_name = 'schedule/main.html'
-    queryset = Tournament.objects.filter(
-        end_date__gte=timezone.now().date()
-    ).order_by('start_date') 
+    # queryset = Tournament.objects.filter(
+    #     end_date__gte=timezone.now().date()
+    # ).order_by('start_date') 
+    queryset = Tournament.objects.filter(start_date__gte=timezone.now().date(), end_date__isnull=True) | Tournament.objects.filter(end_date__lte=timezone.now().date())
+    queryset.order_by('start_date') #'-start_date reverses the order
     paginate_by = 10
 
 class PastTournamentList(ListView):
     template_name = 'schedule/history.html'
-    queryset = Tournament.objects.filter(
-        end_date__lte=timezone.now().date()
-    ).order_by('-start_date') #'-start_date reverses the order
+    queryset = Tournament.objects.filter(start_date__lt=timezone.now().date(), end_date__isnull=True) | Tournament.objects.filter(end_date__lte=timezone.now().date())
+    queryset.order_by('-start_date') #'-start_date reverses the order
     paginate_by = 10
 
 class TournamentDetailView(DetailView):
