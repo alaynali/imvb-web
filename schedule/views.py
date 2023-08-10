@@ -33,7 +33,7 @@ class UpcomingTournamentList(ListView):
     # queryset = Tournament.objects.filter(
     #     end_date__gte=timezone.now().date()
     # ).order_by('start_date') 
-    queryset = Tournament.objects.filter(start_date__gte=timezone.now().date(), end_date__isnull=True) | Tournament.objects.filter(end_date__lte=timezone.now().date())
+    queryset = Tournament.objects.filter(start_date__gte=timezone.now().date(), end_date__isnull=True) | Tournament.objects.filter(end_date__gte=timezone.now().date())
     queryset.order_by('start_date') #'-start_date reverses the order
     paginate_by = 10
 
