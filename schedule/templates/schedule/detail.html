@@ -10,11 +10,11 @@ Schedule - {{object.name}}
 <html lang="en">
     <section class="container section">
         <div class="mt-4 pt-4">
-            <h3 class="title">{{object.name}}</h3>
-            <p class="text">{{object.description}}</p>
+            <h3 class="title">{{object.name}}</h3><br>
+            <p class="text">{{object.description}}</p><br>
         </div>
         <div class="mt-4 pt-4">
-            <h5 class="heading">Results</h5>
+            <h5 class="heading">Results</h5><br>
             {% if object.result_text or object.result_link %}
                 <p class="text">{{object.result_text}}</p>
                 {% if not object.result_text %}
