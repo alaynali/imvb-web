@@ -20,7 +20,7 @@ class Player(models.Model):
     position = models.CharField(max_length=50)
     height = models.CharField(help_text="Enter in format [feet]\'[inches]\"", default="", max_length=5)
     major = models.CharField(max_length=50, blank=True)
-    image = models.ImageField(upload_to="roster", default="static/roster/profile_icon.png")
+    image = models.ImageField(upload_to="roster", default="static/profile_icon.png")
 
     objects = CustomManager() # assign CustomManager to model
 
