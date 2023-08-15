@@ -11,7 +11,7 @@
     <div class="container">
         <a class="navbar-brand" href="../..">
             <!-- dimensions 1400px by 2000px -->
-            <img src="{% static 'illinois_logo.png'%}" width="28" height="40">
+            <img src="{% static 'illinois_logo.png'%}" width="25.2" height="36">
             {% comment %} University of Illinois Men's Volleyball Club {% endcomment %}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
                     <a class="nav-link dropdown-toggle" href="../../teams/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Teams
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-custom dropdown-menu-dark">
+                    <ul class="dropdown-menu dropdown-menu-custom dropdown-menu-dark" style="border-radius: 0;">
                         <li><a class="dropdown-item" href="../../teams/">About</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="../../teams/#illini-1s">1s Roster</a></li>
@@ -51,5 +51,16 @@
         </div>
     </div>
 </nav>
+<script>
+    $(document).ready(function () {
+        $('.dropdown').hover(function () {
+            $(this).addClass('show');
+            $(this).find('.dropdown-menu').addClass('show');
+        }, function () {
+            $(this).removeClass('show');
+            $(this).find('.dropdown-menu').removeClass('show');
+        });
+    });
+</script>
 
 {% endblock content %}

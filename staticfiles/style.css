@@ -41,8 +41,8 @@ white:
         (1) hex #E8E9EB
         (2) hex #DDDEDE
         (3) hex #D2D2D2
-
 */
+
 html {
     height: 100%;
 }
@@ -75,7 +75,6 @@ body {
     background: linear-gradient(180deg, rgba(221,222,222,1) 80%, rgba(175,199,219,1) 93%, rgba(19,41,75,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dddede",endColorstr="#13294b",GradientType=1);
 }
-
 
 /* hero background image*/
 .bgimage {
@@ -147,9 +146,55 @@ body {
     -o-transition: background-color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
 }
+
 .dropdown-menu-custom {
-    background-color: rgba(0,0,0,0.5); 
+    background-color: rgba(57, 44, 44, 0.2);
 }
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* @media screen and (min-width: 768px) {
+    .dropdown:hover .dropdown-menu,
+    .btn-group:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      margin-top: 0;
+    }
+    .dropdown-toggle {
+      margin-bottom: 2px;
+    }
+    .navbar .dropdown-toggle,
+    .nav-tabs .dropdown-toggle {
+      margin-bottom: 0;
+    }
+  }
+  */
+/* .navbar a, .navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+ } */
+  
+/* .navbar-nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+} */
+   
+.navbar-nav li.dropdown a {
+    border-bottom: 2.5px solid transparent;
+}
+.navbar-nav li ul li {
+    padding: 0px;
+}
+.navbar-nav li:hover>a {
+    border-bottom: 2.5px solid rgb(255, 95, 5);
+    color: white !important;
+    background-color: transparent !important;
+}
+.navbar-nav ul.dropdown-menu a:hover {
+    border-bottom: 2.5px solid transparent;
+}
+
 
 .title {
     font-family: 'Montserrat', sans-serif;
