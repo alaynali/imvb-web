@@ -21,6 +21,6 @@ class HomeView(ListView):
     def get_queryset(self):
         myset = {
             "photos": Photo.objects.all(),
-            "announcements": Announcement.objects.all().order_by('created')
+            "announcements": Announcement.objects.all().order_by('-created')
         }
         return myset
