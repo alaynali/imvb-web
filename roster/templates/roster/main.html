@@ -9,17 +9,17 @@ Teams
 <!DOCTYPE html>
 <html lang="en" class="background-color">
     <body>
-        <div class="mt-4 pt-4" id="heading"> 
-            <h2 class="title">Teams</h2><br>
-            <p class="text">
-                IMVB is divided into three teams: the 1s, 2s, and 3s. Club leaders determine teams at the beginning 
-                of the season based on skill level. <br>The 1s team competes in NCVF Division I A while the 2s and 3s 
-                compete in NCVF Division III against other B and C teams. All three teams maintain the 
-                goal of competing at a high level.
-            </p>
-        </div>
-        <section class="container section" id="illini-1s">
-            <div class="mt-4 pt-4">
+        <section class="container section">
+            <div class="mt-4 pt-4" id="heading"> 
+                <h2 class="title">Teams</h2><br>
+                <p class="text">
+                    IMVB is divided into three teams: the 1s, 2s, and 3s. Club leaders determine teams at the beginning 
+                    of the season based on skill level. <br>The 1s team competes in NCVF Division I A while the 2s and 3s 
+                    compete in NCVF Division III against other B and C teams. All three teams maintain the 
+                    goal of competing at a high level.
+                </p>
+            </div>
+            <div class="mt-4 pt-4" id="illini-1s">
                 <h2 class="title">Illini 1s Roster</h2>
                     
                     {% for player in data.first %}
@@ -40,9 +40,7 @@ Teams
                  
                 
             </div>
-        </section>
-        <section class="container section" id="illini-2s">
-            <div>
+            <div class="mt-4 pt-4" id="illini-2s">
                 <h2 class="title">Illini 2s Roster</h2>
                     
                     {% for player in data.second %}
@@ -61,9 +59,7 @@ Teams
                     {% endfor %}
                 
             </div>
-        </section>
-        <section class="container section" id="illini-3s">
-            <div>
+            <div class="mt-4 pt-4" id="illini-3s">
                 <h2 class="title">Illini 3s Roster</h2>
                     
                     {% for player in data.third %}
