@@ -106,12 +106,12 @@ body {
     .parallax {
         background-attachment: scroll;
     }
-    .navbar-collapse {
+    /* .navbar-collapse {
         min-height: 100vh;
     }
     .navbar-custom {
         background-color: #13294B;
-    }
+    } */
     
 }
 
