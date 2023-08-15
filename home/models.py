@@ -16,8 +16,8 @@ class Announcement(models.Model):
     image = models.ImageField(upload_to='home', blank=True)
     description = models.TextField(max_length=1000)
     button_name = models.CharField(max_length=50, blank=True)
-    button_hyperlink = models.URLField(blank=True)
-    created = models.DateTimeField(auto_now_add=True, help_text='Note: this field is REQUIRED if button name is not empty.')
+    button_hyperlink = models.URLField(blank=True, help_text='Note: this field is REQUIRED if button name is not empty.')
+    created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.name}"

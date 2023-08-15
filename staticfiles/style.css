@@ -106,6 +106,13 @@ body {
     .parallax {
         background-attachment: scroll;
     }
+    .navbar-collapse {
+        min-height: 100vh;
+    }
+    .navbar-custom {
+        background-color: #13294B;
+    }
+    
 }
 
 /* text css above hero image */
