@@ -88,7 +88,7 @@ body {
     /* for parallax scrolling */
     background-size: cover;
     background-attachment: fixed; 
-    background-position: center;
+    background-position: center !important;
     background-repeat: no-repeat;
 }
 .bgimage::before {
@@ -102,15 +102,19 @@ body {
 }
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
-    .parallax {
+    /* .parallax { 
         background-attachment: scroll;
     }
-    /* .navbar-collapse {
+    .navbar-collapse {
         min-height: 100vh;
     }
     .navbar-custom {
         background-color: #13294B;
     } */
+    body {
+        align-items: flex-start;
+    }
+
     
 }
 
