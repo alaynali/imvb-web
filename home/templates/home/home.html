@@ -81,7 +81,7 @@ Homepage
         <section class="container section">
             <hr class="solid">
             {% for obj in data.announcements %}
-            <div class='container mt-4 pt-4 text-center announcement'>
+            <div class='mt-4 pt-4 text-center announcement'>
                 <h2 class='title'>{{obj.name}}</h2>
                 {% if obj.image %}
                 <img src='{{obj.image.url}}'></img>
